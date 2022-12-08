@@ -1,4 +1,5 @@
 
+
 //Just unit conversion
 function toRadians(degrees) {
 	return degrees * Math.PI / 180;
@@ -17,7 +18,9 @@ function roundHundreth(rounded){
 function computePerformance(){
 
 var speed = $("#speed").val();
-var bAng = $("#bankAngle").val(); 
+var gForce = $("#gForce").val(); 
+var bAng = toDegrees(Math.acos(1/gForce));
+
 
 
 //From this point on the fomulas are a very specific varity of aerodynamic black magic from various flight textbooks.
